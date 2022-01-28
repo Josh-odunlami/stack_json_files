@@ -1,0 +1,36 @@
+{
+	"LoggingEnabled": {
+		"TargetBucket": "stack-buck1-dolapo-serverlogs",
+		"TargetPrefix": "stack-buck1-dolapo/",
+		"TargetGrants": [{
+				"Grantee": {
+					"Type": "AmazonCustomerByEmail",
+					"EmailAddress": "dolapoanif@outlook.com"
+				},
+				"Permission": "FULL_CONTROL"
+			},
+			{
+				"Grantee": {
+					"Type": "Group",
+					"URI": "http://acs.amazonaws.com/groups/global/AllUsers"
+				},
+				"Permission": "READ"
+
+			},
+			{
+				"Grantee": {
+					"Type": "Group",
+					"URI": "http://acs.amazonaws.com/groups/s3/LogDelivery"
+				},
+				"Permission": "WRITE"
+			},
+			{
+				"Grantee": {
+					"Type": "Group",
+					"URI": "http://acs.amazonaws.com/groups/s3/LogDelivery"
+				},
+				"Permission": "READ_ACP"
+			}
+		]
+	}
+}

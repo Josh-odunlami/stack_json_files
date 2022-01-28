@@ -1,0 +1,20 @@
+{
+    "Id": "Policy1634382805573",
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Stmt1634382778912",
+        "Action": [
+          "s3:GetObject",
+          "s3:PutObject"
+        ],
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::${stack-buck-tf-dolapo}/*",
+        "Principal": {
+          "AWS": [
+            "arn:aws:iam::893587233857:user/stackterraform"
+          ]
+        }
+      }
+    ]
+  }

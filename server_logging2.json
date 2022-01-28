@@ -1,0 +1,36 @@
+{
+	"LoggingEnabled": {
+		"TargetBucket": "stack-buck2-josh",
+		"TargetPrefix": "stack-buck2-josh-serverlogs/",
+		"TargetGrants": [{
+				"Grantee": {
+					"Type": "AmazonCustomerByEmail",
+					"EmailAddress": "joshlammy85@gmail.com"
+				},
+				"Permission": "FULL_CONTROL"
+			},
+			{
+				"Grantee": {
+					"Type": "Group",
+					"URI": "http://acs.amazonaws.com/groups/global/AllUsers"
+				},
+				"Permission": "READ"
+
+			},
+			{
+				"Grantee": {
+					"Type": "Group",
+					"URI": "http://acs.amazonaws.com/groups/s3/LogDelivery"
+				},
+				"Permission": "WRITE"
+			},
+			{
+				"Grantee": {
+					"Type": "Group",
+					"URI": "http://acs.amazonaws.com/groups/s3/LogDelivery"
+				},
+				"Permission": "READ_ACP"
+			}
+		]
+	}
+}
